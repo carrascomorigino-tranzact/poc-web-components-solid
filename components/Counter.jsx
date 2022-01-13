@@ -1,6 +1,8 @@
 import { createSignal } from "solid-js";
+import { customElement } from 'solid-element';
 
-function Counter() {
+
+customElement("solid-counter", () => {
   const [count, setCount] = createSignal(0);
   const increment = () => setCount(count() + 1);
 
@@ -9,6 +11,4 @@ function Counter() {
       {count()}
     </button>
   );
-}
-
-export default Counter
+})
