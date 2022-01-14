@@ -1,6 +1,6 @@
 {
   "name": "@carrascomorigino-tranzact/poc-web-components-solid",
-  "version": "1.0.",
+  "version": "1.0.8",
   "description": "",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@carrascomorigino-tranzact"
