@@ -20,7 +20,7 @@ const style = `div * {
           color: white;
         }`;
 
-customElement("my-counter", () => {
+customElement("solid-counter", () => {
   const [count, setCount] = createSignal(0);
   return (
     <div>

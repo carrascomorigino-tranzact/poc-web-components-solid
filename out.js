@@ -1088,7 +1088,7 @@
           background-color: seagreen;
           color: white;
         }</style><button>-</button><span></span><button>+</button></div>`, 10);
-  customElement("my-counter", () => {
+  customElement("solid-counter", () => {
     const [count, setCount] = createSignal(0);
     return (() => {
       const _el$ = _tmpl$.cloneNode(true), _el$2 = _el$.firstChild, _el$3 = _el$2.nextSibling, _el$4 = _el$3.nextSibling, _el$5 = _el$4.nextSibling;
