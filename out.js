@@ -1070,14 +1070,31 @@
   }
 
   // components/Counter.jsx
-  var _tmpl$ = template(`<button type="button"></button>`, 2);
-  customElement("solid-counter", () => {
+  var _tmpl$ = template(`<div><style>div * {
+          font-size: 200%;
+        }
+
+        span {
+          width: 4rem;
+          display: inline-block;
+          text-align: center;
+        }
+
+        button {
+          width: 4rem;
+          height: 4rem;
+          border: none;
+          border-radius: 10px;
+          background-color: seagreen;
+          color: white;
+        }</style><button>-</button><span></span><button>+</button></div>`, 10);
+  customElement("my-counter", () => {
     const [count, setCount] = createSignal(0);
-    const increment = () => setCount(count() + 1);
     return (() => {
-      const _el$ = _tmpl$.cloneNode(true);
-      _el$.$$click = increment;
-      insert(_el$, count);
+      const _el$ = _tmpl$.cloneNode(true), _el$2 = _el$.firstChild, _el$3 = _el$2.nextSibling, _el$4 = _el$3.nextSibling, _el$5 = _el$4.nextSibling;
+      _el$3.$$click = () => setCount(count() - 1);
+      insert(_el$4, count);
+      _el$5.$$click = () => setCount(count() + 1);
       return _el$;
     })();
   });
